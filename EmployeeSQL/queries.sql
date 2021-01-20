@@ -57,10 +57,10 @@ ORDER BY e.last_name;
 --From dept_emp table: dept_no
 SELECT e.emp_no AS "Employer Number.", e.last_name AS "Last Name", e.first_name AS "First Name", d.dept_name AS "Department Name"
 FROM employees AS e
-LEFT JOIN dept_emp as de ON
-e.emp_no = de.emp_no 
-LEFT JOIN department as d ON
-d.dept_no = de.dept_no
+LEFT JOIN dept_emp as de 
+ON e.emp_no = de.emp_no 
+LEFT JOIN department as d 
+ON d.dept_no = de.dept_no
 WHERE d.dept_name = 'Sales'
 ORDER BY e.last_name;
 
@@ -71,10 +71,10 @@ ORDER BY e.last_name;
 --From dept_emp table:dept_no
 SELECT e.emp_no AS "Employer Number.", e.last_name AS "Last Name", e.first_name AS "First Name", d.dept_name AS "Department Name"
 FROM employees AS e
-LEFT JOIN dept_emp as de ON
-e.emp_no = de.emp_no 
-LEFT JOIN department as d ON
-d.dept_no = de.dept_no
+LEFT JOIN dept_emp as de 
+ON e.emp_no = de.emp_no 
+LEFT JOIN department as d 
+ON d.dept_no = de.dept_no
 WHERE d.dept_name = 'Sales'
 OR d.dept_name = 'Development'
 ORDER BY e.last_name;
